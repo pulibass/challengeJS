@@ -20,7 +20,7 @@ for (const key in usuarios) {
 } */
 
 //for off
-let usuarioObject = [
+/* let usuarioObject = [
     {
         edad: 32,
         nombre: "Javier",
@@ -37,11 +37,11 @@ for (const iterator of usuarioObject) {
     console.log(`numero de usuario ${iterator.usuario}: 
     nombre: ${iterator.nombre},
     edad: ${iterator.edad}`)
-}
+} */
 
 //switch
 
-let suma = 0;
+/* let suma = 0;
 switch (suma) {
     case 0:
         console.log(`el resultado es 0`)
@@ -54,4 +54,10 @@ switch (suma) {
         break;
     default:
         break;
-}
+} */
+
+let frase = 'hola eduardo como estas';
+// let arr = frase.split(' '); // tambien reduce, cuando necesitas devolver un solo valor, por el momento no se usa!!
+let palabra1 = frase.split(' ').reduce((previousValue, currentValue) => currentValue.length > previousValue.length ? currentValue : previousValue, '');
+
+console.log(palabra1);
