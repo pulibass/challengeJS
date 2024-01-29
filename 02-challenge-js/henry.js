@@ -97,7 +97,7 @@ let usuarios = [
 console.log(estaOffline(usuarios, "toni")) */
 
 
-function actividadesEnComun(persona1, persona2) {
+/* function actividadesEnComun(persona1, persona2) {
     // La funcion llamada 'actividadesEnComun' recibe como argumento dos arrays de actividades (strings) llamados 'persona1' y 'persona2'
     // y debe devolver un array de strings con las actividades en comun ( aquellas que se repiten ) entre cada array.
     // ej: persona1 = ['leer', 'comer', 'pasear', 'dormir', 'jugar']
@@ -107,7 +107,7 @@ function actividadesEnComun(persona1, persona2) {
     // Tu código aca:
     let actividadesComunes = [];
 
-    /* for (let i = 0; i < persona1.length; i++) {
+     for (let i = 0; i < persona1.length; i++) {
         for (let a = 0; a < persona2.length; a++) {
             console.log(persona1[i], persona2[a])
             if (persona1[i] == persona2[a]) {
@@ -115,24 +115,24 @@ function actividadesEnComun(persona1, persona2) {
             }
         }
     }
-    console.log(actividadesComunes) */
+    console.log(actividadesComunes) 
 
-    for (const array1 of persona1) {
-        for(const array2 of persona2 ){
-            if(array1 == array2){
-                actividadesComunes.push(array1)
-            }
+for (const array1 of persona1) {
+    for (const array2 of persona2) {
+        if (array1 == array2) {
+            actividadesComunes.push(array1)
         }
     }
-    console.log(actividadesComunes)
+}
+console.log(actividadesComunes)
 }
 
 let persona1 = ['leer', 'comer', 'pasear', 'dormir', 'jugar'];
 let persona2 = ['comer', 'dormir', 'futbol'];
 
-console.log(actividadesEnComun(persona1, persona2))
+console.log(actividadesEnComun(persona1, persona2)) */
 
-function buscaDestruye(arreglo, num) {
+/* function buscaDestruye(arreglo, num) {
     // La funcion 'buscaDestruye' recibe como argumento un array de enteros 'arreglo' y un entero 'num'.
     // Esta funcion tiene que eliminar los numeros del array que coincidan el numero recibido como argumento.
     // La función debe retornar el array sin los números sacados.
@@ -141,19 +141,31 @@ function buscaDestruye(arreglo, num) {
     // Ej: buscaDestruye([1, 2, 3, 4, 1], 1) devuelve => [2, 3, 4]
     //
     // Tu código aca:
+    let numDelete = arreglo.filter(numero => numero !== num)
+    return numDelete
 }
 
-function sumarElTipo(arreglo) {
+let arreglo = [1, 2, 3, 4, 1]
+
+console.log(buscaDestruye(arreglo, 1)) */
+
+/* function sumarElTipo(arreglo) {
     // La funcion llamada 'sumarElTipo' recibe un array de strings como argumento
-    // que contiene tipos de vehiculos y debe devolver un objeto con la cantidad
-    // de veces que se repita cada tipo.
+    // que contiene tipos de vehiculos y debe devolver un objeto con la cantidad de veces que se repita cada tipo.
     // El objeto que devuelve tiene como propiedades el nombre de cada vehiculo y su valor es la cantidad de veces que se repite.
     // Ej:
     // sumarElTipo(['auto', 'moto', 'auto']); debe retornar {auto: 2, moto: 1}
     // Tip: podes usar el ciclo for o el metodo de Array 'reduce'
     // Tu código aca:
-}
+    // let obj = {'auto': 2, 'moto': 1}
 
+    let obj = {}
+    for (let vehiculo of arreglo) {
+        obj[vehiculo] = obj[vehiculo] + 1 || 1;
+    }
+    return obj;
+}
+console.log(sumarElTipo(['auto', 'moto', 'auto'])) */
 // =======================================================================
 
 function crearClaseEmprendedor() {
